@@ -1,0 +1,12 @@
+There are various activation functions which are used in neural networks.
+
+Activation functions are important because they bring non-linearity in the outputs. Without them we will only have linear transformations of the inputs
+and that would mean that the output is a linear transformation of the input. This would not be very useful as it would not be able to solve complex tasks.
+
+Various Activation Functions:
+
+1. Sigmoid: Used in the last layer of the binary classification problem.
+2. TanH(Hyperbolic Tangent): This is a scaled and shifted sigmoid function. Useful for hidden layers.
+3. ReLU(Rectified Linear Unit): Most popular, f(x) = max(0,x). If don't know what to use, use ReLU.
+4. Leaky ReLU: Improvised ReLU. Tries to solve vanishing gradient problem.
+5. Softmax: Squishes the output to fit within 0-1, and gives a probabilistic output. It is used in the last layer of the multi - classification problem.
