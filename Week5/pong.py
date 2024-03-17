@@ -10,7 +10,7 @@ from torchvision.transforms import Compose, Resize, Grayscale, ToTensor
 from PIL import Image
 import matplotlib.pyplot as plt
 
-# Define the neural network architecture
+# The neural network architecture
 class DQN(nn.Module):
     def __init__(self, input_dim, output_dim):
         super(DQN, self).__init__()
@@ -28,13 +28,12 @@ def preprocess(image):
     if isinstance(image, tuple):
         image = image[0]  # Extract the image from the tuple
 
-    # Convert NumPy array to PIL image
     image = Image.fromarray(image)
 
     resize_transform = Compose([Resize((80, 80)), Grayscale(), ToTensor()])
     return resize_transform(image).view(1, -1).float()
 
-# Experience Replay buffer
+# The Replay buffer
 class ReplayMemory:
     def __init__(self, capacity):
         self.memory = deque(maxlen=capacity)
@@ -56,7 +55,7 @@ class DDQNAgent:
         self.batch_size = batch_size
         self.lr = lr
 
-        self.input_dim = 80 * 80  # Size after preprocessing
+        self.input_dim = 80 * 80
         self.output_dim = self.env.action_space.n
 
         self.policy_net = DQN(self.input_dim, self.output_dim)
@@ -94,7 +93,7 @@ class DDQNAgent:
                 step_result = self.env.step(action)
                 if len(step_result) < 4:
                     raise ValueError("Unexpected step_result format")
-                next_state, reward, done, _ = step_result[:4]  # Adjust the unpacking based on step_result length
+                next_state, reward, done, _ = step_result[:4] 
                 next_state = preprocess(next_state)
                 total_reward += reward
 
@@ -134,11 +133,9 @@ class DDQNAgent:
         loss.backward()
         self.optimizer.step()
 
-# Initialize the environment and agent
 env = gym.make("PongNoFrameskip-v4")
 agent = DDQNAgent(env)
 
-# Train the agent and get episode rewards
 episode_rewards = agent.train(num_episodes=1000)
 
 # Plotting the average rewards per episode
@@ -154,5 +151,5 @@ def plot_rewards(episode_rewards):
 
 plot_rewards(episode_rewards)
 
-# Save the trained model
+# Saving the trained model
 torch.save(agent.policy_net.state_dict(), 'pong_ddqn_model.pth')
