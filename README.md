@@ -1,5 +1,4 @@
-## WiDS : Into the RLverse
-This project is a part of "Winter in Data Science(WiDS), 2023" conducted by Analytics Club, IIT Bombay. The mentors for this project are Atharva Bendale and Vishal Bysani.
+## Deep Reinforcement Learning
 
 ## Project Schedule
 - Week 1 : Recap of Python programming and introduction to Python libraries such as NumPy, MatPlotlib, PyTorch. Introduction to Reinforcement Learning and multi-armed bandits. Simulating a multi-armed bandits problem to be solved in next week.
@@ -9,7 +8,7 @@ This project is a part of "Winter in Data Science(WiDS), 2023" conducted by Anal
 - Week 5 : The Final project is to make a RL agent using Dueling Deep Q Networks which plays any complex game from Gymnasium of the mentees' choice (like Pong, Tetris, Bowling & Breakout).
 
 ## Resources
-We will mostly follow "Reinforcement Learning : An introduction by Richard S. Sutton and Andrew G. Barto" and "Grokking Deep Reinforcement Learning" throughout this course for reinforcment learning concepts.
+I have followed "Reinforcement Learning : An introduction by Richard S. Sutton and Andrew G. Barto" and "Grokking Deep Reinforcement Learning" throughout this course for reinforcment learning concepts.
 - [Sutton and Barto](SuttonBarto.pdf)
 - [Grokking Deep Reinforcement Learning](GrokkingRL.pdf)
 - [Slides by David Silver](https://www.davidsilver.uk/teaching/)
