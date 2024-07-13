@@ -1,5 +1,5 @@
 ## Deep Reinforcement Learning
-
+This repository contains my work on a Deep Reinforcement Learning project done in Winter 2023.
 ## Project Schedule
 - Week 1 : Recap of Python programming and introduction to Python libraries such as NumPy, MatPlotlib, PyTorch. Introduction to Reinforcement Learning and multi-armed bandits. Simulating a multi-armed bandits problem to be solved in next week.
 - Week 2 : Introduction to Markov Decision Processes and implementing basic algorithm to train an RL agent which can find optimal policies for an MDP. Learning about discounting and also exploitation-exploration tradeoff.
